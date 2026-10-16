@@ -207,4 +207,4 @@ Copybara has not undergone an independent security audit.
 Delete backup files separately if you no longer need them.
 
 
-![Built Together](./Built%20Together_%20Human%20and%20Robot%20Hands.png)
+<img src="./Built%20Together_%20Human%20and%20Robot%20Hands.png" alt="Built Together" width="30%">
