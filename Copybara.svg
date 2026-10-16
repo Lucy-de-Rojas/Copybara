@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+<title>Copybara capybara mascot</title>
+<g stroke="#422d25" stroke-width="15" stroke-linejoin="round" stroke-linecap="round">
+<path fill="#b57843" d="M110 220C77 178 72 112 112 91C151 72 184 113 190 147L286 141C314 100 352 91 374 113C396 138 381 175 364 197C418 215 448 248 448 292L448 360C448 413 409 446 352 446L169 446C113 446 78 409 78 359L78 284C78 258 89 237 110 220Z"/>
+<path fill="#dca56a" d="M107 171C93 134 108 110 127 114C147 118 157 139 158 162" stroke-width="10"/>
+<path fill="#dca56a" d="M315 166C330 133 352 125 358 141C365 155 350 173 341 180" stroke-width="10"/>
+<path fill="#e7b77d" d="M244 266C269 248 316 239 360 248L407 258C449 270 471 295 468 333L466 363C462 402 433 420 392 420L288 420C250 420 227 395 227 358L227 311C227 292 233 276 244 266Z"/>
+<path d="M150 255C161 247 174 247 184 255" fill="none" stroke-width="11"/>
+<path d="M328 251C339 244 350 244 358 251" fill="none" stroke-width="11"/>
+<path d="M381 307L401 307L396 322L384 322Z" fill="#422d25" stroke-width="8"/>
+<path d="M394 324L394 345C382 357 368 360 352 354" fill="none" stroke-width="9"/>
+<path d="M197 153L207 130M218 151L234 132" fill="none" stroke-width="10"/>
+</g>
+</svg>
