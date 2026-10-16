@@ -205,3 +205,6 @@ Copybara has not undergone an independent security audit.
 5. To remove saved history and preferences, delete `%LOCALAPPDATA%\Copybara`.
 
 Delete backup files separately if you no longer need them.
+
+
+[Built Together](./Built%20Together_%20Human%20and%20Robot%20Hands.png)
