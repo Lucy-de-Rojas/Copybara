@@ -1,5 +1,13 @@
 # Copybara 🦫
 
+
+
+## Screenshot
+
+![Copybara clipboard manager showing saved text, images and pinned items](./CopybaraScreenshot2.png)
+
+
+
 A free, local clipboard manager for Windows, with a friendly capybara mascot.
 
 Save text and images, keep favourites pinned, search your history and personalise your clipboard with colourful themes.
@@ -18,6 +26,9 @@ Save text and images, keep favourites pinned, search your history and personalis
 - **Capybara scrolling** — drag the capybara handle to browse your collection.
 
 ## Getting started
+
+![Copybara clipboard manager showing saved text, images and pinned items](./CopyaraScreenshot1.png)
+
 
 Copybara is a Windows desktop application requiring .NET Framework 4.8 or later.
 
