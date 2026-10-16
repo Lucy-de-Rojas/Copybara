@@ -1,104 +1,196 @@
-COPYBARA - VERSION 5
+# Copybara 🦫
 
-UPDATE / START
-1. Choose Quit app in the older app before updating.
-2. Extract this ZIP into a permanent folder.
-3. Open its Copybara folder and double-click Start-Copybara.cmd.
-The launcher uses Windows' .NET Framework compiler to build Copybara.exe.
-No extra packages, internet connection or administrator rights are needed.
-All source and icon assets are included. Copybara.exe works on its own afterwards.
-Your existing history, pins and startup choice carry over automatically.
-Keep the new app folder in place. Do not open an older version afterwards.
-If startup is enabled, launching this update refreshes the registered app path.
+A free, local clipboard manager for Windows, with a friendly capybara mascot.
 
-NEW IN VERSION 5
-- Copybara name and a capybara mascot on the app, tray and image-category icons.
-- Light, Dark and Random theme buttons at the top right.
-- Random chooses a coordinated palette that stays until you choose another theme.
-  The exact palette is remembered even after quitting and signing in again.
-- Selected items have a bright orange highlighter background in every theme.
-  A selected pin turns orange too; when deselected it returns to yellow.
-- Backup and Restore buttons for password-protected portable backups.
+Save text and images, keep favourites pinned, search your history and personalise your clipboard with colourful themes.
 
-USE
-Copy text or an image normally. Open Copybara with Ctrl+Alt+V or its tray icon.
-Select an item to preview it. Copy selected (or double-click) copies it back to
-the Windows clipboard; return to your document and press Ctrl+V to paste.
-Sidebar: All items, document icon for text, capybara icon for images, Pinned.
-Hover over an icon to see its name. Counts refer to the whole collection.
-Search and filters work together. Image search uses its label, not OCR.
-Pins appear below unpinned items. There is no 25-item limit. Duplicates are saved once.
-Delete removes the selected saved item after confirmation.
-Clear deletes unpinned history after confirmation; pinned items are kept.
-Pause saving stops new captures; Resume saving starts them again.
-X hides the window; it keeps saving. Quit app stops it.
-In Windows High Contrast mode, system selection colours take priority.
+## Features
 
-BACKUP
-Click Backup, choose the destination and enter a password twice (10+ characters).
-The .copybara file contains all saved text, images, pin states, dates and theme.
-It is encrypted with AES-256-CBC and authenticated with HMAC-SHA256. Separate
-keys are derived from the password using PBKDF2 with a random salt. A fresh
-salt and IV are generated for each backup. No cloud service is involved.
-Keep the password: there is no password-reset or recovery service.
-Store the file somewhere you can find later (for example, an external drive).
-A backup is a snapshot: click Backup again to include newer clips.
-A backup supports up to 100,000 items. Large histories can take time to process.
-Copybara is busy during backup/restore, so wait before copying new items.
+- **Text and images** — save clipboard content while Copybara is running.
+- **More pins** — keep favourites without Windows’ 25-item pin limit.
+- **Search and filters** — find saved text, images or pinned items.
+- **Clear selection** — selected items are highlighted in bright orange.
+- **Pinned favourites** — highlighted in yellow, below unpinned items.
+- **Themes** — choose Light, Dark or Random. Your choice is remembered.
+- **Keyboard shortcut** — open Copybara with `Ctrl + Alt + V`.
+- **Automatic startup** — optionally start when signing in to Windows.
+- **Backup and restore** — create portable, password-protected backups.
+- **Capybara scrolling** — drag the capybara handle to browse your collection.
 
-RESTORE
-Click Restore, choose a .copybara backup and enter its password.
-The file is authenticated before importing. Restoring adds missing clips,
-restores backed-up pins on matching clips, and applies the backed-up theme.
-Your other saved clips remain. Matching contents are not duplicated. An item
-already pinned remains pinned. The startup path is not imported from a backup.
-The backup can be restored in Copybara on another Windows PC or account.
-Imported history is re-encrypted for that PC's current Windows account.
-If a disk error occurs during the final import, already imported items are
-reported; you can retry the same backup without duplicating them.
+## Getting started
 
-AUTOMATIC STARTUP
-Start with Windows controls a startup entry for your Windows user, named
-JairoClipboard (the original identifier is retained for compatible updates).
-It is enabled on first run if never configured before. It opens in the tray at
-sign-in; Windows may delay startup. Untick the checkbox to disable it.
-If you move the app folder, launch it manually once to update the startup path.
-It runs only when you are signed in and does not change other Windows accounts.
+Copybara is a Windows desktop application requiring .NET Framework 4.8 or later.
 
-WHAT IS SAVED
-Plain text, including Unicode and line breaks, and bitmap images stored as PNG.
-Not Word formatting, HTML, copied files or animated images. Images take precedence
-when one copy contains both text and an image. Items over 25 MB or images over
-40 megapixels are skipped. Large histories use more space and take longer to open.
-Copybara cannot automatically import Windows+V history: copy those items again
-while it is running to save them here.
+1. Download and extract the project ZIP, or clone the repository.
+2. Keep the extracted files in a permanent folder.
+3. Double-click `Start-Copybara.cmd`.
+4. The launcher builds `Copybara.exe` from the included source and opens it.
 
-PRIVACY AND LOCAL FILES
-The supplied code makes no network requests, has no account, analytics or uploads.
-Local history stays in %LOCALAPPDATA%\JairoClipboard\History for compatibility.
-Local history files use Windows DPAPI encryption for your Windows account.
-Theme choice is in %LOCALAPPDATA%\JairoClipboard\theme.txt.
-Encryption does not protect against malware, apps running as you, or someone
-using your unlocked Windows account. A plain copy of the History folder alone
-is not a portable backup; use the Backup button for transfer/recovery elsewhere.
-Windows clipboard sync and other clipboard apps are independent. This app does
-not disable them; Windows sync can be turned off in Settings > System > Clipboard.
-Pause saving before copying passwords or information you do not want retained.
-Two common password-manager exclusion flags are honoured, but not all sensitive
-copies can be recognised. Deletion removes this app's copy, not Windows clipboard
-contents, other apps' copies or old backups. Secure disk erasure is not claimed.
+No third-party packages or administrator privileges are required.
 
-REMOVE
-Untick Start with Windows, choose Quit app, and delete the app folder.
-To remove local history too, delete %LOCALAPPDATA%\JairoClipboard after quitting.
-Delete any .copybara backups separately if you do not want to keep them.
+After the first successful build, you can open `Copybara.exe` directly.
 
-VALIDATION
-The previous version was confirmed working by Jairo. Version 5 was reviewed and
-packaged on Linux. Random palette text contrast and archive integrity were
-checked. Windows compilation, backup/restore and the new UI still need a real
-Windows test; no Windows runtime was available here.
-Try Light/Dark/Random, quit and reopen to check the saved palette, select a
-pinned item, and try a backup followed by Restore. Restoring the same backup
-should preserve the current collection without duplicate clips.
-Send any exact error or a screenshot if something fails.
+## Using Copybara
+
+1. Copy text or an image normally.
+2. Open Copybara using `Ctrl + Alt + V` or its notification-area icon.
+3. Select an item to preview it.
+4. Click **Copy selected**, or double-click the item.
+5. Return to your document and press `Ctrl + V` to paste.
+
+Copybara must be running to save new clipboard content.
+
+### Search and filters
+
+Use the sidebar to display:
+
+- **All items**
+- **Text**, shown by the document icon
+- **Images**, shown by the capybara icon
+- **Pinned items**
+
+Hover over an icon to see its name.
+
+Search and filters work together. Image search uses the saved label; it does not read text inside images.
+
+### Managing items
+
+- **Pin / Unpin** changes an item's pin status.
+- **Delete** removes the selected saved item after confirmation.
+- **Clear** removes unpinned history after confirmation. Pinned items are kept.
+- Duplicate content is saved once.
+
+### Themes
+
+Under **Theme selector**, choose:
+
+- **Light**
+- **Dark**
+- **Random**
+
+Random creates a colour palette that stays in place until you choose another theme, including after restarting the app.
+
+Windows High Contrast colours take priority over custom selection colours.
+
+### Running in the background
+
+- **Pause saving** stops new captures.
+- **Resume saving** starts capturing again.
+- Closing the window with **X** hides it while collection continues.
+- **Quit app** stops collection and exits.
+- **Start with Windows** controls automatic startup at sign-in.
+
+The `Ctrl + Alt + V` shortcut can also launch Copybara when it is closed, once its Start menu shortcut has been created.
+
+## Backup and restore
+
+The **Backup** and **Restore** buttons are at the bottom right.
+
+### Create a backup
+
+1. Click **Backup**.
+2. Choose where to save the file.
+3. Enter a password twice, using at least 10 characters.
+4. Keep the resulting `.copybara` file somewhere safe.
+
+The backup includes saved text, images, pins, dates and theme.
+
+A backup is a snapshot. Create a new one to include newer clips.
+
+**Keep your password: there is no password-reset or recovery service.**
+
+### Restore a backup
+
+1. Click **Restore**.
+2. Select a `.copybara` backup file.
+3. Enter its password.
+
+Missing clips are added without duplicating matching content. Backed-up pins and theme are restored, and other current clips are kept.
+
+Backups can be restored on another Windows PC or account.
+
+### Backup protection
+
+Backups use:
+
+- AES-256-CBC encryption
+- HMAC-SHA256 authentication
+- Separate keys derived from the password using PBKDF2
+- A fresh random salt and IV for each backup
+
+The format supports up to 100,000 items. Large histories may take time to process. Clipboard collection pauses during backup and restore dialogs.
+
+## Privacy and storage
+
+Copybara stores its history locally. The supplied code contains no network requests, accounts, analytics or upload functionality.
+
+Local history is encrypted using Windows DPAPI for the current Windows account.
+
+| Data | Location |
+| --- | --- |
+| Saved history | `%LOCALAPPDATA%\Copybara\History` |
+| Theme preference | `%LOCALAPPDATA%\Copybara\theme.txt` |
+
+Use **Backup** to transfer history to another computer. Copying the History folder alone does not create a portable backup.
+
+Other applications running under your Windows account may access clipboard data. Pause saving before copying information you do not want retained.
+
+Deleting an item from Copybara does not remove it from the current Windows clipboard or older backups. Windows clipboard sync is managed separately.
+
+## Updating
+
+1. Choose **Quit app** before replacing application files.
+2. Replace the project files with the newer version.
+3. Run `Start-Copybara.cmd` to rebuild and launch.
+
+Keep the application folder in a permanent location. If you move it, open Copybara manually once to refresh its startup and shortcut paths.
+
+## Sharing
+
+Share the project ZIP or a link to this repository.
+
+Each recipient runs Copybara on their own Windows PC, with separate local history.
+
+**Do not upload personal `.copybara` backups or `.clip` history files to GitHub.**
+
+## Supported content
+
+Copybara saves plain text and bitmap images.
+
+Rich text formatting, copied files, HTML formatting and animation are not preserved. Images take precedence when a clipboard item contains both text and an image.
+
+Individual items over 25 MB and images over 40 megapixels are skipped. Large histories use more disk space and may slow startup.
+
+Existing Windows clipboard history cannot be imported automatically. Copy those entries again while Copybara is running.
+
+## Source files
+
+| File | Purpose |
+| --- | --- |
+| `Copybara.cs` | Interface, clipboard collection, themes and local storage |
+| `BackupSupport.cs` | Password dialogs and encrypted backup and restore |
+| `ScrollSupport.cs` | Capybara scroll handle and list scrolling |
+| `Start-Copybara.cmd` | Build and launch script |
+| `Copybara.svg`, `Copybara.png`, `Copybara.ico` | Mascot and application icons |
+
+## Reporting problems
+
+Please include:
+
+- Your Windows version
+- Steps to reproduce the problem
+- The exact error message, if any
+
+Remove sensitive clipboard content from screenshots before sharing them.
+
+Copybara has not undergone an independent security audit.
+
+## Uninstalling
+
+1. Untick **Start with Windows**.
+2. Choose **Quit app**.
+3. Delete the application folder.
+4. Press `Windows + R`, enter `shell:programs`, and delete `Copybara.lnk`.
+5. To remove saved history and preferences, delete `%LOCALAPPDATA%\Copybara`.
+
+Delete backup files separately if you no longer need them.
